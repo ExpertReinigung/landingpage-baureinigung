@@ -518,7 +518,7 @@ gtag('set','ads_data_redaction',true);gtag('set','url_passthrough',true);
     var text='Art: '+(daten.art||'-')+'\nObjekt: '+(daten.objekt||'-')+'\nFläche: '+(daten.flaeche||'-')+'\nZeitpunkt: '+(daten.wann||'-')+
       '\n\nName: '+wert('k-name')+'\nTelefon: '+wert('k-tel')+'\nE-Mail: '+wert('k-mail')+'\nPLZ/Ort: '+wert('k-ort')+
       '\n\nSeite: '+location.href;
-    var body={name:wert('k-name'),phone:wert('k-tel'),email:wert('k-mail'),ort:wert('k-ort'),message:text,
+    var body={name:wert('k-name'),phone:wert('k-tel'),email:wert('k-mail'),ort:wert('k-ort'),message:text,art:daten.art||'',objekt:daten.objekt||'',flaeche:daten.flaeche||'',wann:daten.wann||'',seite:location.href,herkunft:document.referrer||'',
       consent_art:'hinweis_ohne_haken',rechtsgrundlage:'Art. 6 Abs. 1 lit. b DSGVO',consent_text:ds,consent_ts:new Date().toISOString(),website:''};
     kn.disabled=true;kn.textContent='Wird gesendet …';fe.hidden=true;
     var ab=('AbortController' in window)?new AbortController():null,uhr=setTimeout(function(){if(ab)ab.abort();},15000);
