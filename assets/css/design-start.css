@@ -1,0 +1,114 @@
+/* Designsprache der Startseite expert-reinigung.de (Vorschau) */
+@font-face{font-family:'Archivo';font-style:normal;font-weight:100 900;font-display:swap;src:url(../fonts/archivo-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+:root{--tinte:#0B1F3A;--tinte-2:#3E4C63;--tinte-3:#6B7890;--grund:#ECF8FF;--weiss:#fff;--linie:#D9E6F2;--blau:#0067D1;--blau-h:#0052A8;--hell:#ECF8FF;--rand-blau:#7ABBEA;--band:#0067D1;
+--f-anz:'Archivo',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;--f-text:'Archivo',system-ui,-apple-system,'Segoe UI',Arial,sans-serif}
+body{background:#fff;color:var(--tinte)}
+/* Knöpfe */
+.knopf{border-radius:2px;background:var(--blau);color:#fff;font-weight:600;box-shadow:none;letter-spacing:.01em}
+.knopf:hover{background:var(--blau-h)}
+.knopf--gross{min-height:56px;padding:1rem 1.6rem;font-size:1.02rem}
+.knopf--rand{background:#fff;color:var(--blau);border:1.5px solid var(--rand-blau)}
+.knopf--rand:hover{background:var(--hell);color:var(--blau-h)}
+.knopf--rand svg{color:var(--blau)}
+.knopf--hell{background:#fff;color:var(--blau)}
+.knopf--hell:hover{background:var(--hell)}
+/* Kopf */
+.kopf{background:rgba(255,255,255,.97);border-bottom:1px solid var(--linie)}
+.kopf nav a{color:var(--tinte-2);font-weight:500}
+.kopf__tel{gap:.4rem}
+.kopf__tel svg{width:16px;height:16px}
+/* Hero */
+.hero{background:linear-gradient(90deg,#fff 0,#fff 58%,var(--hell) 58%,var(--hell) 100%);color:var(--tinte)}
+.hero__bild{display:none}
+.hero .innen{grid-template-columns:1.15fr .85fr;align-items:start}
+.hero .g-pill{background:#fff;border:1px solid var(--linie);color:var(--tinte);backdrop-filter:none}
+.ort{color:var(--blau);font:600 .8rem/1.4 var(--f-text);text-transform:uppercase;letter-spacing:.14em}
+.ort::before{width:34px;height:2px;border-radius:0;background:var(--blau);box-shadow:none}
+.ansage{font:800 clamp(2.5rem,1.4rem + 4vw,4.3rem)/1.02 var(--f-anz);text-transform:none;letter-spacing:-.025em;color:var(--tinte)}
+.ansage span{color:var(--blau)}
+.dreh{margin:1rem 0 0;min-height:2.9em;font:600 clamp(1.15rem,1rem + .7vw,1.5rem)/1.35 var(--f-text);color:var(--blau)}
+.dreh__text{background:linear-gradient(transparent 58%,#CFE8FF 58%);padding:0 .1em}
+.dreh__cursor{display:inline-block;width:2px;height:1.05em;margin-left:3px;vertical-align:-.15em;background:var(--blau);animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+@media (prefers-reduced-motion:reduce){.dreh__cursor{display:none}}
+.hero .lead{color:var(--tinte-2)}
+.hero .checks li{color:var(--tinte)}
+.hero .checks svg{color:var(--blau)}
+.vertrauen{margin:1.1rem 0 0;font-size:.92rem;color:var(--tinte-2)}
+.vertrauen b{color:var(--tinte)}
+.vertrauen__sterne{color:#FBBC04;letter-spacing:1px}
+.punkt{margin:0 .35rem;color:var(--rand-blau)}
+.quiz{border-radius:0;box-shadow:0 24px 60px rgba(11,31,58,.12);border-top:4px solid var(--blau)}
+.quiz .null-euro{border-radius:2px;background:var(--blau)}
+.opt{border-radius:2px}
+.opt.ist,.opt:hover{background:var(--hell)}
+@media (max-width:900px){.hero{background:#fff}.hero .innen{grid-template-columns:1fr}.quiz{background:#fff}}
+/* Band */
+.band{background:var(--blau);box-shadow:0 10px 24px rgba(0,103,209,.25)}
+.band__wort{color:#fff;font-weight:700}
+.band__wort::after{background:#fff}
+.band__spur::before,.band__spur::after{opacity:.25}
+/* Karten, Abschnitte */
+.sek__kopf h2,.karte h3{text-transform:none;font-weight:800;letter-spacing:-.02em}
+.kicker{color:var(--blau)}
+.karte,.stimmen figure,.ablauf li{border-radius:0}
+.karte a{color:var(--blau)}
+.sek--dunkel{background:var(--tinte)}
+.sek--dunkel .kicker,.vorteil svg,.zusage b{color:#7ABBEA}
+.zusage{border-radius:0}
+.ablauf li{background:var(--hell)}
+.ablauf li::before{border-radius:0;background:var(--blau)}
+.ablauf li.hervor{background:var(--blau);color:#fff}
+.ablauf li.hervor p{color:rgba(255,255,255,.85)}
+.ablauf li.hervor::before{background:#fff;color:var(--blau)}
+.schluss{background:var(--blau)}
+.schluss h2{text-transform:none;font-weight:800;letter-spacing:-.02em}
+.schluss p{color:rgba(255,255,255,.85)}
+.schluss .tel,.schluss .wa{color:#fff}
+.fragen details{border-radius:0}
+/* Neue CTA-Zeilen */
+.cta-zeile{margin-top:clamp(1.8rem,1.4rem + 1.5vw,2.6rem);padding:1.4rem 1.6rem;background:var(--hell);border-left:4px solid var(--blau);display:flex;flex-wrap:wrap;gap:1rem 1.5rem;align-items:center;justify-content:space-between}
+.cta-zeile p{margin:0;font-size:1.08rem}
+.ablauf__cta{margin-top:1.6rem;display:flex;flex-wrap:wrap;gap:.6rem 1.2rem;align-items:center}
+.ablauf__cta span{color:var(--tinte-3);font-size:.92rem}
+.fragen__cta{margin:1.6rem 0 0;text-align:center;color:var(--tinte-2)}
+.fragen__cta a{color:var(--blau);font-weight:700;text-decoration:none;white-space:nowrap}
+.fragen__cta svg{width:15px;height:15px;vertical-align:-2px;margin-right:4px}
+/* Fotoband */
+.foto{padding-block:0 clamp(2.5rem,2rem + 2vw,4rem);background:#fff}
+.foto__bild{margin:0;position:relative}
+.foto__bild img{display:block;width:100%;height:clamp(240px,30vw,440px);object-fit:cover;object-position:60% 40%}
+.foto__badge{position:absolute;left:clamp(12px,3vw,28px);bottom:clamp(20px,3vw,34px);background:#fff;padding:.8rem 1rem;display:grid;grid-template-columns:auto auto;column-gap:.6rem;align-items:center;box-shadow:0 12px 30px rgba(11,31,58,.18)}
+.foto__badge b{font-size:1.7rem;line-height:1;grid-row:span 2;color:var(--tinte)}
+.foto__sterne{color:#FBBC04;font-size:.9rem;letter-spacing:1px}
+.foto__badge small{color:var(--tinte-2);font-size:.8rem}
+.farbbalken{display:block;height:6px;background:linear-gradient(90deg,#E53935 0 25%,#FBBC04 25% 50%,#34A853 50% 75%,#0067D1 75% 100%)}
+/* Mobile Leiste */
+.leiste{display:none}
+@media (max-width:760px){
+  .leiste{display:grid;grid-template-columns:1fr 1fr 1.4fr;position:fixed;left:0;right:0;bottom:0;z-index:70;background:#fff;border-top:1px solid var(--linie);box-shadow:0 -8px 24px rgba(11,31,58,.1);padding:8px max(10px,env(safe-area-inset-right,0px)) calc(8px + env(safe-area-inset-bottom,0px)) max(10px,env(safe-area-inset-left,0px));gap:8px}
+  .leiste a{min-height:48px;display:flex;align-items:center;justify-content:center;gap:.4rem;text-decoration:none;font-weight:700;font-size:.9rem;color:var(--blau);border:1.5px solid var(--rand-blau);border-radius:2px}
+  .leiste a svg{width:18px;height:18px}
+  .leiste a.leiste__haupt{background:var(--blau);border-color:var(--blau);color:#fff}
+  body{padding-bottom:calc(72px + env(safe-area-inset-bottom,0px))}
+  .kopf nav{display:none}
+  .kopf .knopf--klein:not(.kopf__tel){display:none}
+  .aktion .knopf{width:100%}
+}
+/* Feinschliff Abstände Hero */
+.hero{padding-block:clamp(2rem,1.4rem + 2.4vw,3.6rem) clamp(2.6rem,2rem + 2.4vw,4.4rem)}
+.ansage span{background:none;-webkit-background-clip:border-box;background-clip:border-box;color:var(--blau)}
+.ort{margin:0 0 1.1rem;font-weight:600;color:var(--blau);letter-spacing:.14em}
+.ort::before{background:var(--blau);box-shadow:none;flex:none}
+.hero .g-pill{margin-bottom:1rem}
+.dreh{min-height:1.4em;margin:.9rem 0 0}
+.hero .lead{margin:1rem 0 1.1rem;color:var(--tinte-2)}
+.hero .checks{margin-bottom:1.4rem}
+.hero .checks li{font-weight:500}
+.hero .checks svg{color:var(--blau)}
+@media (max-width:760px){.dreh{min-height:2.8em}.ort{font-size:.72rem;letter-spacing:.1em}
+  .leiste{grid-template-columns:1fr 1fr 1.4fr!important;background:#fff!important;backdrop-filter:none!important}
+  .leiste a,.leiste .anruf{border-radius:2px!important;border:1.5px solid var(--rand-blau)!important;background:#fff!important;color:var(--blau)!important;font-weight:700!important}
+  .leiste a.leiste__haupt{background:var(--blau)!important;border-color:var(--blau)!important;color:#fff!important}}
+.hero .ansage{margin:.15em 0 0}
+.vergleich,.vn figure,.fragen details,.zusage,.stimmen figure{border-radius:0!important}

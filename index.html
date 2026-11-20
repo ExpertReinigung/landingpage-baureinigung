@@ -25,6 +25,7 @@
 <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/img/baureinigung-team-expert-reinigung-neubau.webp" as="image" fetchpriority="high">
 <link rel="stylesheet" href="assets/css/seite.css">
+<link rel="stylesheet" href="assets/css/design-start.css">
 <link rel="stylesheet" href="assets/css/consent.css">
 <!-- Consent Mode v2: alles steht auf "denied", bevor der Tag Manager lädt -->
 <script>
@@ -221,8 +222,8 @@ gtag('set','ads_data_redaction',true);gtag('set','url_passthrough',true);
   <div class="innen">
     <a class="marke" href="https://expert-reinigung.de/" aria-label="Expert Reinigung – zur Startseite"><img decoding="async" src="assets/img/expert-reinigung-logo.png" alt="Expert Reinigung – Gebäudereinigung" width="247" height="71"></a>
     <nav aria-label="Seitenbereiche"><a href="#leistungen">Leistungen</a><a href="#bilder">Bilder</a><a href="#vorteile">Vorteile</a><a href="#ablauf">Ablauf</a><a href="#fragen">Fragen</a></nav>
-    <a class="kopf__tel" href="tel:+4921629199851"><svg class="i"><use href="#i-tel"/></svg>02162 9199851</a>
-    <a class="knopf knopf--klein" href="#quiz">Besichtigung vereinbaren</a>
+    <a class="knopf knopf--klein knopf--rand kopf__tel" href="tel:+4921629199851"><svg class="i"><use href="#i-tel"/></svg>02162 9199851</a>
+    <a class="knopf knopf--klein" href="#quiz">Kostenlose Besichtigung</a>
   </div>
 </header>
 
@@ -234,6 +235,7 @@ gtag('set','ads_data_redaction',true);gtag('set','url_passthrough',true);
       <a class="g-pill" href="https://www.google.com/maps/place/?q=place_id:ChIJEfdFRCuquEcRnKPNdSQTh6I" target="_blank" rel="noopener" aria-label="5,0 von 5 Sternen bei Google"><svg class="g-pill__g" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 13 4 4 13 4 24s9 20 20 20 20-9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="m6.3 14.7 6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-7.9l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg><span class="g-pill__sterne" aria-hidden="true"><svg><use href="#i-stern"/></svg><svg><use href="#i-stern"/></svg><svg><use href="#i-stern"/></svg><svg><use href="#i-stern"/></svg><svg><use href="#i-stern"/></svg></span><span class="g-pill__text"><b>5,0</b> bei Google</span></a>
       <h1 class="ort">Baureinigung in Viersen, Mönchengladbach, Krefeld, Neuss und Düsseldorf</h1>
       <p class="ansage">Baureinigung, die die <span>Abnahme</span> besteht.</p>
+      <p class="dreh" aria-hidden="true"><span class="dreh__text" id="dreh">Kostenlose Besichtigung direkt auf Ihrer Baustelle.</span><span class="dreh__cursor"></span></p>
       <p class="lead">Wir kommen kostenlos zur Besichtigung, nennen Ihnen einen Festpreis und übergeben Ihr Objekt bezugsfertig.</p>
       <ul class="checks">
         <li><svg class="i"><use href="#i-check"/></svg>Kostenlose Besichtigung vor Ort</li>
@@ -241,9 +243,10 @@ gtag('set','ads_data_redaction',true);gtag('set','url_passthrough',true);
         <li><svg class="i"><use href="#i-check"/></svg>Nacharbeit nach der Abnahme ohne Aufpreis</li>
       </ul>
       <div class="aktion">
-        <a class="knopf" href="#quiz">Besichtigung vereinbaren</a>
-        <a class="tel" href="tel:+4921629199851"><svg class="i"><use href="#i-tel"/></svg>02162 9199851</a>
+        <a class="knopf knopf--gross" href="#quiz">Kostenlose Besichtigung anfragen <span aria-hidden="true">→</span></a>
+        <a class="knopf knopf--gross knopf--rand" href="tel:+4921629199851"><svg class="i"><use href="#i-tel"/></svg>02162 9199851</a>
       </div>
+      <p class="vertrauen"><span class="vertrauen__sterne" aria-hidden="true">★★★★★</span> <b>5,0</b> bei Google <span class="punkt">·</span> Besichtigung 0 € <span class="punkt">·</span> Angebot in 24–48 h</p>
     </div>
 
     <div class="quiz" id="quiz">
@@ -359,6 +362,16 @@ gtag('set','ads_data_redaction',true);gtag('set','url_passthrough',true);
       <figure><div class="vergleich" style="--p:50%"><img decoding="async" width="1000" height="1130" src="assets/img/baureinigung-sanitaer-nachher.webp" alt="Sanitärbereich nachher" loading="lazy"><img decoding="async" class="vorher" width="1000" height="1123" src="assets/img/baureinigung-sanitaer-vorher.webp" alt="Sanitärbereich vorher" loading="lazy"><span class="etikett e-v">Vorher</span><span class="etikett e-n">Nachher</span><span class="griff"></span><input type="range" min="0" max="100" value="50" aria-label="Vorher-Nachher-Vergleich Sanitärbereich"></div><figcaption>Sanitärbereich</figcaption></figure>
       <figure><div class="vergleich" style="--p:50%"><img decoding="async" width="1000" height="558" src="assets/img/baureinigung-fliesen-nachher.webp" alt="Fliesenboden nachher" loading="lazy"><img decoding="async" class="vorher" width="1000" height="558" src="assets/img/baureinigung-fliesen-vorher.webp" alt="Fliesenboden vorher" loading="lazy"><span class="etikett e-v">Vorher</span><span class="etikett e-n">Nachher</span><span class="griff"></span><input type="range" min="0" max="100" value="50" aria-label="Vorher-Nachher-Vergleich Fliesenboden"></div><figcaption>Fliesenboden</figcaption></figure>
     </div>
+    <div class="cta-zeile">
+      <p><b>Soll Ihr Objekt auch so aussehen?</b> Wir schauen es uns kostenlos an.</p>
+      <div class="aktion"><a class="knopf" href="#quiz">Besichtigung anfragen <span aria-hidden="true">→</span></a><a class="knopf knopf--rand" href="tel:+4921629199851"><svg class="i"><use href="#i-tel"/></svg>02162 9199851</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="foto rand" aria-label="Unser Team">
+  <div class="innen">
+    <figure class="foto__bild"><img decoding="async" loading="lazy" src="assets/img/baureinigung-team-expert-reinigung-neubau.webp" alt="Reinigungsteam von Expert Reinigung mit Ausrüstung vor einem Neubau" width="1800" height="1200"><span class="foto__badge"><b>5,0</b><span class="foto__sterne" aria-hidden="true">★★★★★</span><small>Google-Bewertung</small></span><span class="farbbalken" aria-hidden="true"></span></figure>
   </div>
 </section>
 
@@ -386,6 +399,7 @@ gtag('set','ads_data_redaction',true);gtag('set','url_passthrough',true);
       <li><h3>Festpreis in 24 bis 48 Stunden</h3><p>Ein klares Angebot ohne versteckte Kosten.</p></li>
       <li><h3>Reinigung und Abnahme</h3><p>Wir reinigen zum Termin und gehen das Objekt mit Ihnen ab.</p></li>
     </ol>
+    <div class="ablauf__cta"><a class="knopf knopf--gross" href="#quiz">Schritt 1 starten: Besichtigung anfragen <span aria-hidden="true">→</span></a><span>Dauert 1 Minute. Kostenlos und unverbindlich.</span></div>
   </div>
 </section>
 
@@ -417,6 +431,7 @@ gtag('set','ads_data_redaction',true);gtag('set','url_passthrough',true);
       <details><summary>Reinigen Sie auch nach Renovierung oder Sanierung?</summary><p>Ja. Nach Renovierung, Umbau oder Sanierung entfernen wir Baustaub, Farb- und Putzspritzer, Silikonreste und Schutzfolien in Wohnungen, Büros und Gewerbeflächen in Viersen, Mönchengladbach, Krefeld, Neuss und Düsseldorf.</p></details>
       <details><summary>In welchen Städten sind Sie im Einsatz?</summary><p>Von unserem Sitz in Viersen aus in Mönchengladbach, Krefeld, Neuss, Düsseldorf und Umgebung.</p></details>
     </div>
+    <p class="fragen__cta">Ihre Frage ist nicht dabei? <a href="tel:+4921629199851"><svg class="i"><use href="#i-tel"/></svg>Rufen Sie uns an: 02162 9199851</a> oder <a href="https://wa.link/kym5hh" target="_blank" rel="noopener">schreiben Sie per WhatsApp</a>.</p>
   </div>
 </section>
 
@@ -425,13 +440,19 @@ gtag('set','ads_data_redaction',true);gtag('set','url_passthrough',true);
     <h2 id="h-schluss">Ihre Übergabe steht bald an?</h2>
     <p>Zeigen Sie uns die Baustelle. Die Besichtigung ist kostenlos und unverbindlich.</p>
     <div class="aktion">
-      <a class="knopf" href="#quiz">Besichtigung vereinbaren</a>
+      <a class="knopf knopf--gross knopf--hell" href="#quiz">Kostenlose Besichtigung anfragen <span aria-hidden="true">→</span></a>
       <a class="tel" href="tel:+4921629199851"><svg class="i"><use href="#i-tel"/></svg>02162 9199851</a>
       <a class="wa" href="https://wa.link/kym5hh" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>WhatsApp</a>
     </div>
   </div>
 </section>
 </main>
+
+<nav class="leiste" aria-label="Schnellkontakt">
+  <a class="anruf" href="tel:+4921629199851"><svg class="i"><use href="#i-tel"/></svg><span>Anrufen</span></a>
+  <a href="https://wa.link/kym5hh" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg><span>WhatsApp</span></a>
+  <a class="besuch leiste__haupt" href="#quiz"><span>Besichtigung 0 €</span></a>
+</nav>
 
 <footer class="fuss rand">
   <div class="innen">
@@ -468,10 +489,6 @@ gtag('set','ads_data_redaction',true);gtag('set','url_passthrough',true);
   </div>
 </footer>
 
-<nav class="leiste" aria-label="Schnellkontakt">
-  <a class="anruf" href="tel:+4921629199851">Anrufen</a>
-  <a class="besuch" href="#quiz">Besichtigung</a>
-</nav>
 
 
 <script>
@@ -553,12 +570,21 @@ gtag('set','ads_data_redaction',true);gtag('set','url_passthrough',true);
     window.dataLayer=window.dataLayer||[];
     if(h.indexOf('tel:')===0)dataLayer.push({event:'phone_click',link_url:h});
     else if(/wa\.link|wa\.me|whatsapp/.test(h))dataLayer.push({event:'whatsapp_click',link_url:h});
-    else if(a.closest('.knopf,.band,.besuch')&&h==='#quiz')dataLayer.push({event:'cta_click',cta_text:a.textContent.trim().slice(0,60)});
+    else if(a.closest('.knopf,.band,.besuch,.leiste')&&h==='#quiz')dataLayer.push({event:'cta_click',cta_text:a.textContent.trim().slice(0,60)});
   });
   /* Quiz-Schritte für die Auswertung */
   document.querySelectorAll('.opt').forEach(function(b){b.addEventListener('click',function(){window.dataLayer=window.dataLayer||[];dataLayer.push({event:'quiz_step',feld:b.dataset.feld,wert:b.dataset.wert});});});
 })();
 </script>
 <script src="assets/js/consent.js" defer></script>
+<script>
+(function(){var el=document.getElementById('dreh');if(!el)return;
+var s=["Kostenlose Besichtigung direkt auf Ihrer Baustelle.","Festpreis statt Stundenzettel.","Angebot in 24 bis 48 Stunden nach der Besichtigung.","Nacharbeit nach der Abnahme ohne Aufpreis.","Hebebühnen bis 12 Meter, Industriesauger Klasse M.","Von der Wohnung bis zur Halle über 5.000 m².","Fester Ansprechpartner bis zur Übergabe.","Kurzfristige Termine, wenn es eilt."];
+if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches){var j=0;setInterval(function(){j=(j+1)%s.length;el.textContent=s[j];},4000);return;}
+var i=0,n=s[0].length,weg=false;
+function tick(){var t=s[i];if(!weg){n++;el.textContent=t.slice(0,n);if(n>=t.length){weg=true;return setTimeout(tick,2600);}return setTimeout(tick,38);}
+n--;el.textContent=t.slice(0,n);if(n<=0){weg=false;i=(i+1)%s.length;return setTimeout(tick,250);}setTimeout(tick,18);}
+setTimeout(function(){weg=true;tick();},2600);})();
+</script>
 </body>
 </html>
