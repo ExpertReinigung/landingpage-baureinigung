@@ -162,3 +162,8 @@ body{background:#fff;color:var(--tinte)}
 }
 .quiz .null-euro{box-shadow:none}
 @media (max-width:760px){.quiz .null-euro{display:flex;width:100%;justify-content:center;padding:.7rem 1rem;font-size:.95rem}}
+/* Abzeichen als runde Pille oben rechts auf dem Formular (Handy v6) */
+@media (max-width:760px){
+  .quiz{padding-top:1.6rem}
+  .quiz .null-euro{position:absolute;top:-15px;right:14px;width:auto;display:inline-flex;margin:0;padding:.45rem .9rem .45rem .7rem;border-radius:999px;font-size:.85rem;font-weight:600;background:var(--blau);color:#fff;box-shadow:0 6px 18px rgba(0,103,209,.28)}
+}
