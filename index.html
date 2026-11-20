@@ -533,15 +533,16 @@ gtag('set','ads_data_redaction',true);gtag('set','url_passthrough',true);
     if(document.getElementById('k-web').value){document.getElementById('quiz-inhalt').hidden=true;document.getElementById('danke').hidden=false;return;}
     var kn=document.getElementById('senden'),fe=document.getElementById('fehler');
     var wert=function(id){return document.getElementById(id).value.trim();};
+    var kid=function(k){try{return (new URLSearchParams(location.search).get(k)||'').slice(0,200);}catch(x){return '';}};
     var ds=document.querySelector('[data-ds-hinweis]').textContent.replace(/\s+/g,' ').trim();
     var text='Art: '+(daten.art||'-')+'\nObjekt: '+(daten.objekt||'-')+'\nFläche: '+(daten.flaeche||'-')+'\nZeitpunkt: '+(daten.wann||'-')+
       '\n\nName: '+wert('k-name')+'\nTelefon: '+wert('k-tel')+'\nE-Mail: '+wert('k-mail')+'\nPLZ/Ort: '+wert('k-ort')+
       '\n\nSeite: '+location.href;
-    var body={name:wert('k-name'),phone:wert('k-tel'),email:wert('k-mail'),ort:wert('k-ort'),message:text,art:daten.art||'',objekt:daten.objekt||'',flaeche:daten.flaeche||'',wann:daten.wann||'',seite:location.href,herkunft:document.referrer||'',
+    var body={name:wert('k-name'),phone:wert('k-tel'),email:wert('k-mail'),ort:wert('k-ort'),message:text,art:daten.art||'',objekt:daten.objekt||'',flaeche:daten.flaeche||'',wann:daten.wann||'',seite:location.href,herkunft:document.referrer||'',gclid:kid('gclid'),gbraid:kid('gbraid'),wbraid:kid('wbraid'),
       consent_art:'hinweis_ohne_haken',rechtsgrundlage:'Art. 6 Abs. 1 lit. b DSGVO',consent_text:ds,consent_ts:new Date().toISOString(),website:''};
     kn.disabled=true;kn.textContent='Wird gesendet …';fe.hidden=true;
     var ab=('AbortController' in window)?new AbortController():null,uhr=setTimeout(function(){if(ab)ab.abort();},15000);
-    var ZIEL=document.documentElement.getAttribute('data-formular')||'formular.php';
+    var ZIEL=document.documentElement.getAttribute('data-formular')||'https://hooks.zapier.com/hooks/catch/28726643/CiIAW2mVw99hXnVex/';
     fetch(ZIEL,{method:'POST',headers:{'Content-Type':ZIEL.indexOf('http')===0?'text/plain;charset=utf-8':'application/json'},body:JSON.stringify(body),signal:ab?ab.signal:undefined})
       .then(function(a){clearTimeout(uhr);if(!a.ok)throw new Error('Status '+a.status);return a.text();})
       .then(function(t){var r={};try{r=JSON.parse(t)}catch(x){} if(r.ok===false||r.status==='error')throw new Error('Antwort');

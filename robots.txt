@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /formular.php
 
 Sitemap: https://baureinigung.expert-reinigung.de/sitemap.xml
