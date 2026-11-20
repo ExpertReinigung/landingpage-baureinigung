@@ -130,3 +130,19 @@ body{background:#fff;color:var(--tinte)}
   .sek{padding-block:2.4rem}
   .sek__kopf h2{font-size:1.75rem}
 }
+/* Handy v3: weniger Text, keine Überdeckung */
+.ort--kurz{display:none}
+@media (max-width:760px){
+  .hero h1.ort{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+  .hero .ort--kurz{display:flex;font-size:.7rem;margin:0 0 .5rem}
+  .hero .ansage{font-size:2.1rem}
+  .dreh{font-size:.98rem;min-height:2.7em;margin:.45rem 0 0}
+  .quiz{margin-top:.4rem;padding:1rem;border-top-width:3px}
+  .quiz .null-euro{position:static;display:inline-flex;margin:0 0 .6rem}
+  .quiz__kopf h2{font-size:1.05rem}
+  .quiz__fuss,.fort__text{display:none}
+  .schritt h3{font-size:1rem}
+  .leiste{transition:transform .25s ease}
+  body.quiz-sichtbar .leiste{transform:translateY(110%)}
+}
+@media (max-width:760px){.dreh__cursor{display:none}.dreh{min-height:1.5em}.quiz .fort{margin-top:.6rem}}
