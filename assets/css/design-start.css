@@ -167,3 +167,6 @@ body{background:#fff;color:var(--tinte)}
   .quiz{padding-top:1.6rem}
   .quiz .null-euro{position:absolute;top:-15px;right:14px;width:auto;display:inline-flex;margin:0;padding:.45rem .9rem .45rem .7rem;border-radius:999px;font-size:.85rem;font-weight:600;background:var(--blau);color:#fff;box-shadow:0 6px 18px rgba(0,103,209,.28)}
 }
+@media (max-width:760px){.hero .ansage{font-size:1.95rem}}
+@media (min-width:761px){.hero .ansage{font-size:clamp(2.4rem,1.2rem + 2.6vw,3.5rem);line-height:1.05}
+.quiz .null-euro{border-radius:999px;top:-15px;right:18px;padding:.45rem .9rem .45rem .7rem;box-shadow:0 6px 18px rgba(0,103,209,.28)}}
