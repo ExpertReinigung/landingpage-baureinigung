@@ -170,3 +170,4 @@ body{background:#fff;color:var(--tinte)}
 @media (max-width:760px){.hero .ansage{font-size:1.95rem}}
 @media (min-width:761px){.hero .ansage{font-size:clamp(2.4rem,1.2rem + 2.6vw,3.5rem);line-height:1.05}
 .quiz .null-euro{border-radius:999px;top:-15px;right:18px;padding:.45rem .9rem .45rem .7rem;box-shadow:0 6px 18px rgba(0,103,209,.28)}}
+@media (min-width:761px){.hero .g-pill{margin-bottom:1.3rem}.hero .ort{margin-bottom:1.4rem}.dreh{margin:1.3rem 0 0}.hero .checks{margin:2rem 0 2.2rem;gap:.8rem}.vertrauen{margin-top:1.4rem}}
