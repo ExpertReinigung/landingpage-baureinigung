@@ -528,7 +528,7 @@ gtag('set','ads_data_redaction',true);gtag('set','url_passthrough',true);
       .then(function(t){var r={};try{r=JSON.parse(t)}catch(x){} if(r.ok===false||r.status==='error')throw new Error('Antwort');
         window.dataLayer=window.dataLayer||[];
         dataLayer.push({event:'form_submit',formular:'baureinigung_quiz',leistung:daten.art||'',objekt:daten.objekt||'',flaeche:daten.flaeche||''});
-        dataLayer.push({event:'generate_lead',formular:'baureinigung_quiz'});
+        dataLayer.push({event:'generate_lead',formular:'baureinigung_quiz'});dataLayer.push({event:'lead_form_success',formular:'baureinigung_quiz'});
         document.getElementById('quiz-inhalt').hidden=true;document.getElementById('danke').hidden=false;
         document.getElementById('danke').scrollIntoView({block:'center',behavior:ruhig?'auto':'smooth'});})
       .catch(function(err){clearTimeout(uhr);if(window.console)console.warn('Formular:',err.message);
