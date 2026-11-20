@@ -146,3 +146,18 @@ body{background:#fff;color:var(--tinte)}
   body.quiz-sichtbar .leiste{transform:translateY(110%)}
 }
 @media (max-width:760px){.dreh__cursor{display:none}.dreh{min-height:1.5em}.quiz .fort{margin-top:.6rem}}
+/* Handy v4: Formular-Überschrift weg, mehr Luft oben */
+@media (max-width:760px){
+  .quiz__kopf{display:none}
+  .hero{padding-block:2rem 2.6rem}
+  .hero .ort--kurz{margin:0 0 1rem}
+  .hero .ansage{line-height:1.1}
+  .dreh{margin:1rem 0 0}
+  .hero .innen{gap:1.8rem}
+  .quiz{padding:1.3rem 1.1rem 1.4rem}
+  .quiz .null-euro{margin:0 0 1rem}
+  .quiz .fort{margin:0 0 1.3rem}
+  .schritt h3{margin-bottom:1rem}
+  .wahl{gap:.7rem}
+}
+.quiz .null-euro{box-shadow:none}
