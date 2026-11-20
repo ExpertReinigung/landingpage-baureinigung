@@ -1,6 +1,6 @@
 /* Designsprache der Startseite expert-reinigung.de (Vorschau) */
 @font-face{font-family:'Archivo';font-style:normal;font-weight:100 900;font-display:swap;src:url(../fonts/archivo-latin.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
-:root{--tinte:#0B1F3A;--tinte-2:#3E4C63;--tinte-3:#6B7890;--grund:#ECF8FF;--weiss:#fff;--linie:#D9E6F2;--blau:#0067D1;--blau-h:#0052A8;--hell:#ECF8FF;--rand-blau:#7ABBEA;--band:#0067D1;
+:root{--tinte:#0B1F3A;--tinte-2:#3E4C63;--tinte-3:#6B7890;--grund:#ECF8FF;--weiss:#fff;--linie:#D9E6F2;--blau:#0067D1;--blau-h:#0052A8;--hell:#ECF8FF;--rand-blau:#7ABBEA;--band:#FFC400;
 --f-anz:'Archivo',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;--f-text:'Archivo',system-ui,-apple-system,'Segoe UI',Arial,sans-serif}
 body{background:#fff;color:var(--tinte)}
 /* Knöpfe */
@@ -43,11 +43,10 @@ body{background:#fff;color:var(--tinte)}
 .opt{border-radius:2px}
 .opt.ist,.opt:hover{background:var(--hell)}
 @media (max-width:900px){.hero{background:#fff}.hero .innen{grid-template-columns:1fr}.quiz{background:#fff}}
-/* Band */
-.band{background:var(--blau);box-shadow:0 10px 24px rgba(0,103,209,.25)}
-.band__wort{color:#fff;font-weight:700}
-.band__wort::after{background:#fff}
-.band__spur::before,.band__spur::after{opacity:.25}
+/* Band: gelb wie bisher, durchgehend */
+.band{background:#FFC400}
+.band__wort{color:#10141B}
+.band__wort::after{background:#10141B}
 /* Karten, Abschnitte */
 .sek__kopf h2,.karte h3{text-transform:none;font-weight:800;letter-spacing:-.02em}
 .kicker{color:var(--blau)}
@@ -112,3 +111,22 @@ body{background:#fff;color:var(--tinte)}
   .leiste a.leiste__haupt{background:var(--blau)!important;border-color:var(--blau)!important;color:#fff!important}}
 .hero .ansage{margin:.15em 0 0}
 .vergleich,.vn figure,.fragen details,.zusage,.stimmen figure{border-radius:0!important}
+
+/* Handy: Kopf aufgeräumt, Formular sofort sichtbar */
+@media (max-width:760px){
+  .hero{padding-block:1.2rem 2.2rem}
+  .hero .g-pill,.hero .lead,.hero .checks,.hero .aktion,.hero .vertrauen{display:none}
+  .ort{font-size:.68rem;margin-bottom:.6rem}
+  .ort::before{width:22px}
+  .hero .ansage{font-size:2.35rem;line-height:1.05}
+  .dreh{font-size:1.05rem;min-height:2.7em;margin:.6rem 0 0}
+  .hero .innen{gap:1.1rem}
+  .quiz{padding:1.1rem;box-shadow:0 10px 30px rgba(11,31,58,.1)}
+  .quiz .null-euro{top:-12px}
+  .quiz__kopf h2{font-size:1.15rem;line-height:1.25}
+  .quiz__kopf p{display:none}
+  .opt{min-height:52px;padding:.6rem .85rem}
+  .opt small{display:none}
+  .sek{padding-block:2.4rem}
+  .sek__kopf h2{font-size:1.75rem}
+}
