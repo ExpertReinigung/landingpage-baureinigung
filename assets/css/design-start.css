@@ -187,19 +187,9 @@ body{background:#fff;color:var(--tinte)}
 .logos .logo{display:block;position:relative;min-width:0}
 /* Handy v7 (22.11.2026): Flächen aufräumen, Logos glänzen nacheinander */
 @media (max-width:760px){
-  /* Kennzahlen als ruhige 2x2-Kacheln */
-  .fakten{padding-block:2rem 1.2rem}
-  .zahlen{gap:.6rem}
-  .zahl{background:var(--hell);border-top:3px solid var(--blau);padding:.9rem .9rem 1rem}
-  .zahl b{font-size:2rem}
-  .zahl span{font-size:.9rem;line-height:1.3;margin-top:.3rem}
-  /* Kundenlogos im sauberen Raster */
-  .kunden{padding-block:1.4rem 2.2rem}
-  .kunden p{text-align:center;margin-bottom:.8rem}
-  .logos{grid-template-columns:repeat(4,1fr);gap:1px;background:var(--linie);border:1px solid var(--linie)}
-  .logos .logo{background:#fff;height:68px;display:flex;align-items:center;justify-content:center;padding:10px 8px}
-  .logos img{height:100%;max-height:40px;width:100%;opacity:.6;animation:logoGlanz 12s ease-in-out infinite}
-  .logos .logo::after{content:"";position:absolute;top:7px;right:7px;width:14px;height:14px;opacity:0;transform:scale(.2) rotate(0);
+  /* Kennzahlen und Logos bleiben freistehend wie bisher; nur der Glanz kommt dazu */
+  .logos img{opacity:.72;animation:logoGlanz 12s ease-in-out infinite}
+  .logos .logo::after{content:"";position:absolute;top:-6px;right:2px;width:14px;height:14px;opacity:0;transform:scale(.2) rotate(0);
     clip-path:polygon(50% 0,61% 39%,100% 50%,61% 61%,50% 100%,39% 61%,0 50%,39% 39%);background:#FFC400;
     animation:logoStern 12s ease-in-out infinite}
   .logos .logo:nth-child(2) img,.logos .logo:nth-child(2)::after{animation-delay:1.5s}
@@ -250,6 +240,6 @@ body{background:#fff;color:var(--tinte)}
   .fuss a{padding:.3rem 0;font-size:.88rem}
   .fuss__unten{flex-direction:column;align-items:center;text-align:center;gap:.3rem;margin-top:1.4rem}
 }
-@keyframes logoGlanz{0%,13%,100%{filter:grayscale(1);opacity:.6;transform:scale(1)}4%,8%{filter:grayscale(0) brightness(1.08) drop-shadow(0 0 6px rgba(255,196,0,.55));opacity:1;transform:scale(1.07)}}
+@keyframes logoGlanz{0%,13%,100%{filter:grayscale(1);opacity:.72;transform:scale(1)}4%,8%{filter:grayscale(0) brightness(1.08) drop-shadow(0 0 6px rgba(255,196,0,.55));opacity:1;transform:scale(1.07)}}
 @keyframes logoStern{0%,13%,100%{opacity:0;transform:scale(.2) rotate(0)}5%{opacity:1;transform:scale(1.2) rotate(45deg)}9%{opacity:.9;transform:scale(.8) rotate(90deg)}}
 @media (prefers-reduced-motion:reduce){.logos img,.logos .logo::after{animation:none!important}}
