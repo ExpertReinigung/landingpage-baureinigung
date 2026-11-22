@@ -183,3 +183,73 @@ body{background:#fff;color:var(--tinte)}
 @keyframes sternPuls{0%,55%,100%{transform:scale(1)}65%{transform:scale(1.18)}75%{transform:scale(1)}}
 @media (prefers-reduced-motion:reduce){.g-pill__sterne::after,.g-pill__sterne svg{animation:none}}
 .marke img{height:43px}@media (max-width:640px){.marke img{height:36.5px}}
+/* Logo-Kacheln (Hülle für den Glanz) */
+.logos .logo{display:block;position:relative;min-width:0}
+/* Handy v7 (22.11.2026): Flächen aufräumen, Logos glänzen nacheinander */
+@media (max-width:760px){
+  /* Kennzahlen als ruhige 2x2-Kacheln */
+  .fakten{padding-block:2rem 1.2rem}
+  .zahlen{gap:.6rem}
+  .zahl{background:var(--hell);border-top:3px solid var(--blau);padding:.9rem .9rem 1rem}
+  .zahl b{font-size:2rem}
+  .zahl span{font-size:.9rem;line-height:1.3;margin-top:.3rem}
+  /* Kundenlogos im sauberen Raster */
+  .kunden{padding-block:1.4rem 2.2rem}
+  .kunden p{text-align:center;margin-bottom:.8rem}
+  .logos{grid-template-columns:repeat(4,1fr);gap:1px;background:var(--linie);border:1px solid var(--linie)}
+  .logos .logo{background:#fff;height:68px;display:flex;align-items:center;justify-content:center;padding:10px 8px}
+  .logos img{height:100%;max-height:40px;width:100%;opacity:.6;animation:logoGlanz 12s ease-in-out infinite}
+  .logos .logo::after{content:"";position:absolute;top:7px;right:7px;width:14px;height:14px;opacity:0;transform:scale(.2) rotate(0);
+    clip-path:polygon(50% 0,61% 39%,100% 50%,61% 61%,50% 100%,39% 61%,0 50%,39% 39%);background:#FFC400;
+    animation:logoStern 12s ease-in-out infinite}
+  .logos .logo:nth-child(2) img,.logos .logo:nth-child(2)::after{animation-delay:1.5s}
+  .logos .logo:nth-child(7) img,.logos .logo:nth-child(7)::after{animation-delay:3s}
+  .logos .logo:nth-child(4) img,.logos .logo:nth-child(4)::after{animation-delay:4.5s}
+  .logos .logo:nth-child(5) img,.logos .logo:nth-child(5)::after{animation-delay:6s}
+  .logos .logo:nth-child(3) img,.logos .logo:nth-child(3)::after{animation-delay:7.5s}
+  .logos .logo:nth-child(8) img,.logos .logo:nth-child(8)::after{animation-delay:9s}
+  .logos .logo:nth-child(6) img,.logos .logo:nth-child(6)::after{animation-delay:10.5s}
+
+  /* Überschriften mit blauem Strich darunter */
+  .sek__kopf h2::after{content:"";display:block;width:48px;height:4px;background:var(--blau);margin-top:.75rem}
+  .sek__kopf{margin-bottom:1.4rem}
+
+  /* Leistungen: Karten kompakter, Zusatztext als Hinweis */
+  .leist{gap:.7rem}
+  .karte{padding:1.1rem 1.1rem 1.2rem}
+  .karte .phase{display:inline-block;align-self:flex-start;font-size:.78rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--blau);background:var(--hell);padding:.2rem .5rem;margin-bottom:.5rem}
+  .karte h3{font-size:1.3rem;margin:0 0 .35rem}
+  .karte a{padding-top:.7rem}
+  #leistungen .innen>p{margin:1.2rem 0 0!important;text-align:left!important;font-size:.95rem;line-height:1.55;color:var(--tinte-2);padding:.9rem 1rem;border-left:3px solid var(--blau);background:var(--hell)}
+
+  /* Vorher/Nachher: Bildtitel aufs Bild, weniger Abstand */
+  .vn{gap:.8rem}
+  .vn figure{position:relative}
+  .vn figcaption{position:absolute;left:0;right:0;bottom:0;margin:0;padding:1.6rem .8rem .6rem;color:#fff;font-size:.9rem;background:linear-gradient(transparent,rgba(10,20,35,.7));pointer-events:none}
+  .vergleich .etikett{top:.55rem;font-size:.72rem;padding:.2rem .5rem}
+  .vergleich .e-v{left:.55rem}.vergleich .e-n{right:.55rem}
+  .vergleich .griff::after{width:36px;height:36px}
+  #bilder .cta-zeile{margin-top:1.2rem;padding:1.1rem}
+
+  /* Abschluss: Knöpfe direkt untereinander */
+  .schluss{padding-block:2.4rem}
+  .schluss p{margin:.7rem auto 1.3rem}
+  .schluss .aktion{flex-direction:column;align-items:stretch;gap:.6rem}
+  .schluss .aktion .tel,.schluss .aktion .wa{display:flex;align-items:center;justify-content:center;gap:.5rem;min-height:52px;border:1.5px solid rgba(255,255,255,.55);font-weight:700;text-decoration:none;color:#fff}
+  .schluss .aktion svg{width:20px;height:20px}
+
+  /* Fußbereich geordnet */
+  .fuss{padding-top:1.8rem}
+  .fuss__spalten{grid-template-columns:1fr 1fr;gap:1.4rem 1rem}
+  .fuss__spalten>div{grid-column:1/-1;padding-bottom:1.2rem;border-bottom:1px solid #d2d2d7}
+  .fuss h2{font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--tinte-3);margin-bottom:.4rem}
+  .fuss__spalten>div p{font-size:.9rem;line-height:1.7;color:var(--tinte)}
+  .fuss__spalten>div p a{font-size:inherit;padding:0;color:var(--tinte)}
+  .fuss__unten button{font-size:.88rem}
+  .fuss li{margin:0}
+  .fuss a{padding:.3rem 0;font-size:.88rem}
+  .fuss__unten{flex-direction:column;align-items:center;text-align:center;gap:.3rem;margin-top:1.4rem}
+}
+@keyframes logoGlanz{0%,13%,100%{filter:grayscale(1);opacity:.6;transform:scale(1)}4%,8%{filter:grayscale(0) brightness(1.08) drop-shadow(0 0 6px rgba(255,196,0,.55));opacity:1;transform:scale(1.07)}}
+@keyframes logoStern{0%,13%,100%{opacity:0;transform:scale(.2) rotate(0)}5%{opacity:1;transform:scale(1.2) rotate(45deg)}9%{opacity:.9;transform:scale(.8) rotate(90deg)}}
+@media (prefers-reduced-motion:reduce){.logos img,.logos .logo::after{animation:none!important}}
