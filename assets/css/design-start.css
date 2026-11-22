@@ -243,3 +243,8 @@ body{background:#fff;color:var(--tinte)}
 @keyframes logoGlanz{0%,13%,100%{filter:grayscale(1);opacity:.72;transform:scale(1)}4%,8%{filter:grayscale(0) brightness(1.08) drop-shadow(0 0 6px rgba(255,196,0,.55));opacity:1;transform:scale(1.07)}}
 @keyframes logoStern{0%,13%,100%{opacity:0;transform:scale(.2) rotate(0)}5%{opacity:1;transform:scale(1.2) rotate(45deg)}9%{opacity:.9;transform:scale(.8) rotate(90deg)}}
 @media (prefers-reduced-motion:reduce){.logos img,.logos .logo::after{animation:none!important}}
+/* Bereiche trennen wie bei Apple: abwechselnd Weiß und sehr helles Grau, ohne Linien (22.11.2026) */
+:root{--ton:#F5F5F7}
+#leistungen,.stimmen-sek{background:var(--ton)}
+#leistungen .karte,.stimmen-sek .stimmen figure{background:#fff}
+#bilder,#ablauf,#fragen{background:#fff}
